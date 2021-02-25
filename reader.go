@@ -76,7 +76,7 @@ func (r *reader) Read() (*CDXJ, error) {
 		if err == io.EOF {
 			break
 		} else if err != nil {
-			return nil, fmt.Errorf("this error? %s", err)
+			return nil, err
 		}
 	}
 	return cdxj, nil
